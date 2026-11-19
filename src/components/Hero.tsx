@@ -100,51 +100,56 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
 
           </div>
 
-          {/* Right Column: Premium Typographic & Geometric Monogram Identity */}
+          {/* Right Column: Premium Portrait Spotlight with Ambient Rings */}
           <div className="lg:col-span-5 flex items-center justify-center relative">
             <div className="relative w-full max-w-[420px] aspect-square flex items-center justify-center">
               
               {/* Outer decorative orbit ring */}
               <div className="absolute inset-0 rounded-full border border-dashed border-white/[0.1] animate-spin" style={{ animationDuration: '60s' }} />
-              <div className="absolute inset-8 rounded-full border border-lavender-500/[0.15]" />
-              <div className="absolute inset-16 rounded-full bg-gradient-to-br from-lavender-950/40 via-dark-900/70 to-dark-950/80 backdrop-blur-xl border border-white/[0.08] shadow-2xl shadow-black" />
+              <div className="absolute inset-6 rounded-full border border-lavender-500/[0.15]" />
+              <div className="absolute inset-12 rounded-full bg-gradient-to-br from-lavender-950/40 via-dark-900/70 to-dark-950/80 backdrop-blur-xl border border-white/[0.08] shadow-2xl shadow-black pointer-events-none" />
 
-              {/* Center Monogram Composition */}
-              <div className="relative z-10 flex flex-col items-center justify-center text-center p-8 select-none">
-                <div className="relative mb-3">
-                  <div className="w-24 h-24 rounded-2xl bg-gradient-to-tr from-lavender-900/70 via-purple-900/50 to-lavender-600/30 border border-lavender-400/40 flex items-center justify-center shadow-inner shadow-lavender-500/20">
-                    <span className="font-heading font-extrabold text-4xl tracking-tighter bg-gradient-to-b from-white via-zinc-200 to-lavender-300 bg-clip-text text-transparent">
-                      TS
+              {/* Portrait Image Frame */}
+              <div className="relative z-10 w-64 h-64 sm:w-72 sm:h-72 rounded-3xl overflow-hidden border-2 border-lavender-400/30 shadow-2xl shadow-black/80 group">
+                <img
+                  src={CANDIDATE_INFO.avatarUrl}
+                  alt={CANDIDATE_INFO.name}
+                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                />
+                
+                {/* Subtle vignette gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent opacity-70" />
+                
+                {/* Bottom label overlay */}
+                <div className="absolute bottom-3 left-3 right-3 px-3.5 py-2 rounded-xl bg-dark-950/85 backdrop-blur-md border border-white/[0.1] flex items-center justify-between">
+                  <div>
+                    <span className="font-heading font-bold text-xs sm:text-sm text-zinc-100 block">
+                      {CANDIDATE_INFO.name}
+                    </span>
+                    <span className="text-[10px] text-zinc-400 font-sans block">
+                      Creative Designer
                     </span>
                   </div>
-                  {/* Subtle corner badge */}
-                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-lavender-500 flex items-center justify-center shadow-lg">
-                    <Sparkles className="w-3.5 h-3.5 text-white" />
+                  <div className="w-6 h-6 rounded-lg bg-lavender-500/20 border border-lavender-400/30 flex items-center justify-center text-lavender-300">
+                    <Sparkles className="w-3.5 h-3.5" />
                   </div>
                 </div>
-
-                <span className="font-heading font-bold text-xl text-zinc-100 tracking-wide uppercase">
-                  Tulika Shree
-                </span>
-                <span className="text-xs text-lavender-300/80 font-mono tracking-wider mt-1 uppercase">
-                  Design • Art • Vibe Coding
-                </span>
               </div>
 
               {/* Floating Pill 1: Art & Craft */}
-              <div className="absolute -top-3 left-4 glass-panel px-3.5 py-2 rounded-xl flex items-center space-x-2 shadow-lg border border-white/[0.1] animate-float-slow">
+              <div className="absolute -top-3 left-2 sm:left-4 glass-panel px-3.5 py-2 rounded-xl flex items-center space-x-2 shadow-lg border border-white/[0.1] animate-float-slow z-20">
                 <Palette className="w-4 h-4 text-lavender-400" />
                 <span className="text-xs font-medium text-zinc-200">Graphic Design &amp; Craft</span>
               </div>
 
               {/* Floating Pill 2: Vibe Coding */}
-              <div className="absolute bottom-6 -right-2 glass-panel px-3.5 py-2 rounded-xl flex items-center space-x-2 shadow-lg border border-white/[0.1] animate-float-slow" style={{ animationDelay: '2s' }}>
+              <div className="absolute bottom-6 -right-2 sm:-right-4 glass-panel px-3.5 py-2 rounded-xl flex items-center space-x-2 shadow-lg border border-white/[0.1] animate-float-slow z-20" style={{ animationDelay: '2s' }}>
                 <Cpu className="w-4 h-4 text-emerald-400" />
                 <span className="text-xs font-medium text-zinc-200">Vibe Coding &amp; ADCA</span>
               </div>
 
               {/* Floating Pill 3: B.Sc. Zoology */}
-              <div className="absolute -bottom-4 left-6 glass-panel px-3.5 py-2 rounded-xl flex items-center space-x-2 shadow-lg border border-white/[0.1] animate-float-slow" style={{ animationDelay: '4s' }}>
+              <div className="absolute -bottom-4 left-4 sm:left-6 glass-panel px-3.5 py-2 rounded-xl flex items-center space-x-2 shadow-lg border border-white/[0.1] animate-float-slow z-20" style={{ animationDelay: '4s' }}>
                 <Layers className="w-4 h-4 text-purple-400" />
                 <span className="text-xs font-medium text-zinc-200">B.Sc. Zoology (3rd Year)</span>
               </div>

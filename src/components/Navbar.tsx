@@ -72,8 +72,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
             className="group flex items-center space-x-2.5 text-zinc-100 focus:outline-none"
             aria-label="Tulika Shree Home"
           >
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-lavender-500/20 to-lavender-700/30 border border-lavender-400/30 flex items-center justify-center text-lavender-300 font-heading font-bold text-sm tracking-wider group-hover:border-lavender-400/60 transition-colors">
-              TS
+            <div className="w-9 h-9 rounded-lg overflow-hidden border border-lavender-400/40 bg-dark-850 flex items-center justify-center group-hover:border-lavender-400/80 transition-colors shadow-sm shadow-lavender-900/30">
+              <img
+                src={CANDIDATE_INFO.avatarUrl}
+                alt={CANDIDATE_INFO.name}
+                className="w-full h-full object-cover object-center"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-heading font-bold text-sm sm:text-base tracking-[0.18em] text-zinc-100 group-hover:text-lavender-300 transition-colors uppercase">
