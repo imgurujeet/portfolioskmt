@@ -46,7 +46,8 @@ export const CANDIDATE_INFO = {
   contact: {
     email: "shreetulika64@gmail.com",
     phone: "+91 9905966498",
-    phoneDisplay: "+91 99059 66498"
+    phoneDisplay: "+91 99059 66498",
+    formEndpoint: "https://sendmyform.live/api/f/tulika"
   },
   resume: {
     path: "/assets/Tulika_Shree_Resume.pdf",
