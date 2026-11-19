@@ -21,7 +21,7 @@ export interface ProjectItem {
 export const CANDIDATE_INFO = {
   name: "Tulika Shree",
   initials: "TS",
-  avatarUrl: "/assets/profile.png",
+  avatarUrl: "/assets/avatar.svg",
   headline: "Creativity meets Technology.",
   professionalTitle: "Creative Designer | Digital Creator | Aspiring Developer",
   subTitleBadges: [
