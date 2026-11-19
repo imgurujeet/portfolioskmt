@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-resume": "node scripts/generate-resume.js"
   },
   "dependencies": {
     "lucide-react": "^1.16.0",
